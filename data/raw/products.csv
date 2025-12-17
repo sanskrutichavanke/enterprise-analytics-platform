@@ -1,0 +1,6 @@
+product_id,product_name,category,subcategory,unit_cost
+101,Laptop,Electronics,Computers,700
+102,Office Chair,Furniture,Seating,120
+103,Standing Desk,Furniture,Tables,300
+104,Monitor,Electronics,Displays,180
+105,Keyboard,Electronics,Accessories,40

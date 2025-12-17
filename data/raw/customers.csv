@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,city,state,country,customer_segment
+1,John,Doe,New York,NY,USA,Consumer
+2,Jane,Smith,San Francisco,CA,USA,Corporate
+3,Rahul,Mehta,Mumbai,MH,India,Small Business
+4,Emily,Clark,Boston,MA,USA,Consumer
+5,Amit,Patel,Ahmedabad,GJ,India,Corporate
