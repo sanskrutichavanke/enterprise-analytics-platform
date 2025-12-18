@@ -1,47 +1,40 @@
-# Enterprise Analytics Platform
+# 📊 Enterprise Analytics Platform
 
-An end-to-end analytics engineering project demonstrating how raw business data can be transformed into a clean, analytics-ready star schema using modern data tools.
+## Overview
+This project demonstrates an end-to-end analytics workflow, transforming raw transactional data into actionable business insights using modern analytics engineering tools.
+
+## Architecture
+- **Data Warehouse:** Snowflake  
+- **Transformations & Modeling:** dbt  
+- **Visualization & Reporting:** Power BI  
+
+## Data Modeling
+- Raw data ingested into a **RAW** schema
+- dbt staging models standardize and clean source data
+- Analytics layer built using a **star schema**:
+  - Fact table: `fact_order_items`
+  - Dimension tables: `dim_customer`, `dim_product`
+- Data quality tests implemented:
+  - Not null checks
+  - Uniqueness constraints
+  - Referential integrity tests
+
+## Analytics & Reporting
+The Power BI dashboard delivers:
+- Revenue trend analysis
+- Revenue by customer segment
+- Top products by revenue
+- Top customers by revenue
+- Key KPIs (Total Revenue, Total Orders, AOV, Total Customers)
+
+## Dashboard Preview
+(See screenshots below)
 
 ## Tech Stack
-- **Cloud Storage:** AWS S3
-- **Data Warehouse:** Snowflake
-- **Transformation:** dbt
-- **Version Control:** Git & GitHub
+- Snowflake
+- dbt
+- SQL
+- Power BI
 
-## Architecture Overview
-1. Raw CSV files are ingested into Snowflake (RAW schema)
-2. dbt staging models clean and standardize raw data
-3. dbt marts models create a star schema for analytics
-4. Final fact and dimension models support business reporting and analysis
-
-## Data Model
-### Fact Table
-- **fact_order_items**
-  - order_item_id
-  - order_id
-  - customer_id
-  - product_id
-  - order_date
-  - quantity
-  - unit_price
-  - item_revenue
-
-### Dimension Tables
-- **dim_customer**
-- **dim_product**
-
-## dbt Model Layers
-- **staging:** Source-aligned, lightly transformed models
-- **marts:** Business-ready fact and dimension models
-
-## Key Learnings
-- Designing star schemas for analytics
-- Using dbt refs for dependency management
-- Building modular, production-style ELT pipelines
-- Transforming raw data into analytics-ready models
-
-## Future Improvements
-- Incremental fact models
-- dbt tests and documentation
-- Streaming ingestion (Kafka/Kinesis)
-- BI dashboard integration
+## Outcome
+This project showcases real-world analytics engineering practices, including dimensional modeling, data validation, and business-focused reporting suitable for stakeholder decision-making.
