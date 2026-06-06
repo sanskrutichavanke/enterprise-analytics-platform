@@ -1,50 +1,19 @@
-End-to-end analytics pipeline: raw data → Snowflake + dbt star schema → Power BI dashboards tracking revenue, customers, and KPIs.
+# Enterprise Analytics Platform
 
-# 📊 Enterprise Analytics Platform
-
-## Overview
-This project demonstrates an end-to-end analytics workflow, transforming raw transactional data into actionable business insights using modern analytics engineering tools.
+End-to-end analytics engineering project transforming raw transactional 
+data into business insights using production-grade tools.
 
 ## Architecture
-- **Data Warehouse:** Snowflake  
-- **Transformations & Modeling:** dbt  
-- **Visualization & Reporting:** Power BI  
+Raw Data → Snowflake (RAW schema) → dbt (staging + star schema) → Power BI
 
-## Data Modeling
-- Raw data ingested into a **RAW** schema
-- dbt staging models standardize and clean source data
-- Analytics layer built using a **star schema**:
-  - Fact table: `fact_order_items`
-  - Dimension tables: `dim_customer`, `dim_product`
-- Data quality tests implemented:
-  - Not null checks
-  - Uniqueness constraints
-  - Referential integrity tests
+## Data Model
+- **Fact table:** `fact_order_items`
+- **Dimensions:** `dim_customer`, `dim_product`
+- **Data quality:** not-null, uniqueness, and referential integrity tests via dbt
 
-## Analytics & Reporting
-The Power BI dashboard delivers:
-- Revenue trend analysis
-- Revenue by customer segment
-- Top products by revenue
-- Top customers by revenue
-- Key KPIs (Total Revenue, Total Orders, AOV, Total Customers)
-
-## 📊 Analytics Dashboard (Power BI)
-
-**Revenue & Customer Insights Dashboard**
-- Built on Snowflake + dbt analytics models
-- Visualizes revenue trends, customer segments, and top products
-
-### Screenshots
-![Revenue Overview](dashboards/revenue_overview.png)
-![Customer Revenue Analysis](dashboards/customer_revenue_analysis.png)
+## Dashboards
+Revenue trends · Customer segments · Top products · KPIs (Total Revenue, 
+Orders, AOV, Customers)
 
 ## Tech Stack
-- Snowflake
-- dbt
-- SQL
-- Power BI
-
-## Outcome
-This project showcases real-world analytics engineering practices, including dimensional modeling, data validation, and business-focused reporting suitable for stakeholder decision-making.
-
+`Snowflake` `dbt` `SQL` `Power BI` `GitHub Actions`
