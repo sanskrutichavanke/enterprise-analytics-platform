@@ -1,3 +1,5 @@
+End-to-end analytics pipeline: raw data → Snowflake + dbt star schema → Power BI dashboards tracking revenue, customers, and KPIs.
+
 # 📊 Enterprise Analytics Platform
 
 ## Overview
